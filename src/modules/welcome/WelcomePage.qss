@@ -1,0 +1,21 @@
+QComboBox QFrame {
+    border-radius: 8px;
+    border: none;
+}
+QComboBox::drop-down{
+    border-left-style: solid;
+    border: 0px;
+}
+QComboBox{
+    padding : 12px;
+    border-radius: 4px;
+    combobox-popup: 0;
+}
+QComboBox QAbstractItemView::item {
+    margin: 8px; 
+}
+/* QListView::item{padding: 8px;} */
+QComboBox::editable:! on
+{
+    border: none;
+}
