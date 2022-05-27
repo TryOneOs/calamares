@@ -132,6 +132,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
          </property>
         </spacer>
        </item>
+       <!-- footer bar -->
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_4">
          <item>
