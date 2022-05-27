@@ -48,7 +48,9 @@ WelcomePage::WelcomePage( Config* config, QWidget* parent )
     const int defaultFontHeight = CalamaresUtils::defaultFontHeight();
     ui->setupUi( this );
     ui->aboutButton->setIcon( CalamaresUtils::defaultPixmap(
-        CalamaresUtils::Information, CalamaresUtils::Original, 2 * QSize( defaultFontHeight, defaultFontHeight ) ) );
+       CalamaresUtils::Information, CalamaresUtils::Original, 2 * QSize( defaultFontHeight, defaultFontHeight ) ) );
+
+    ui->aboutButton->setVisible(false);
 
     // insert system-check widget below welcome text
     const int welcome_text_idx = ui->verticalLayout->indexOf( ui->mainText );

@@ -140,7 +140,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
             <string>&amp;About</string>
            </property>
            <property name="flat">
-            <bool>true</bool>
+            <bool>false</bool>
            </property>
           </widget>
          </item>

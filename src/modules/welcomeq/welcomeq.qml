@@ -51,75 +51,75 @@ Page
             visible: !config.requirementsModel.satisfiedRequirements
         }
 
-        RowLayout {
-            id: buttonBar
-            width: parent.width / 1.5
-            height: 64
+        // RowLayout {
+        //     id: buttonBar
+        //     width: parent.width / 1.5
+        //     height: 64
 
-            anchors.bottom: parent.bottom
-            anchors.horizontalCenter: parent.horizontalCenter
+        //     anchors.bottom: parent.bottom
+        //     anchors.horizontalCenter: parent.horizontalCenter
 
-            spacing: Kirigami.Units.largeSpacing* 2
+        //     spacing: Kirigami.Units.largeSpacing* 2
 
-            Button {
-                Layout.fillWidth: true
-                text: qsTr("About")
-                icon.name: "dialog-information"
-                Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
-                Kirigami.Theme.textColor: Kirigami.Theme.textColor
+        //     Button {
+        //         Layout.fillWidth: true
+        //         text: qsTr("About")
+        //         icon.name: "dialog-information"
+        //         Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
+        //         Kirigami.Theme.textColor: Kirigami.Theme.textColor
 
-                visible: true
-                onClicked: {
-                    //onClicked: load.source = "file:/usr/share/calamares/branding/default/show.qml"
-                    onClicked: load.source = "about.qml"
-                }
-            }
+        //         visible: false
+        //         onClicked: {
+        //             //onClicked: load.source = "file:/usr/share/calamares/branding/default/show.qml"
+        //             onClicked: load.source = "about.qml"
+        //         }
+        //     }
 
-            Button {
-                Layout.fillWidth: true
-                text: qsTr("Support")
-                icon.name: "system-help"
-                Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
-                Kirigami.Theme.textColor: Kirigami.Theme.textColor
+        //     Button {
+        //         Layout.fillWidth: true
+        //         text: qsTr("Support")
+        //         icon.name: "system-help"
+        //         Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
+        //         Kirigami.Theme.textColor: Kirigami.Theme.textColor
 
-                visible: config.supportUrl !== ""
-                onClicked: Qt.openUrlExternally(config.supportUrl)
-            }
+        //         visible: config.supportUrl !== ""
+        //         onClicked: Qt.openUrlExternally(config.supportUrl)
+        //     }
 
-            Button {
-                Layout.fillWidth: true
-                text: qsTr("Known issues")
-                icon.name: "tools-report-bug"
-                Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
-                Kirigami.Theme.textColor: Kirigami.Theme.textColor
+        //     Button {
+        //         Layout.fillWidth: true
+        //         text: qsTr("Known issues")
+        //         icon.name: "tools-report-bug"
+        //         Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
+        //         Kirigami.Theme.textColor: Kirigami.Theme.textColor
 
-                visible: config.knownIssuesUrl !== ""
-                onClicked: Qt.openUrlExternally(config.knownIssuesUrl)
-            }
+        //         visible: config.knownIssuesUrl !== ""
+        //         onClicked: Qt.openUrlExternally(config.knownIssuesUrl)
+        //     }
 
-            Button {
-                Layout.fillWidth: true
-                text: qsTr("Release notes")
-                icon.name: "folder-text"
-                Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
-                Kirigami.Theme.textColor: Kirigami.Theme.textColor
+        //     Button {
+        //         Layout.fillWidth: true
+        //         text: qsTr("Release notes")
+        //         icon.name: "folder-text"
+        //         Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
+        //         Kirigami.Theme.textColor: Kirigami.Theme.textColor
 
-                visible: config.releaseNotesUrl !== ""
-                onClicked: load.source = "release_notes.qml"
-                //onClicked: load.source = "file:/usr/share/calamares/release_notes.qml"
-            }
+        //         visible: config.releaseNotesUrl !== ""
+        //         onClicked: load.source = "release_notes.qml"
+        //         //onClicked: load.source = "file:/usr/share/calamares/release_notes.qml"
+        //     }
 
-            Button {
-                Layout.fillWidth: true
-                text: qsTr("Donate")
-                icon.name: "taxes-finances"
-                Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
-                Kirigami.Theme.textColor: Kirigami.Theme.textColor
+        //     Button {
+        //         Layout.fillWidth: true
+        //         text: qsTr("Donate")
+        //         icon.name: "taxes-finances"
+        //         Kirigami.Theme.backgroundColor: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
+        //         Kirigami.Theme.textColor: Kirigami.Theme.textColor
 
-                visible: config.donateUrl !== ""
-                onClicked: Qt.openUrlExternally(config.donateUrl)
-            }
-        }
+        //         visible: config.donateUrl !== ""
+        //         onClicked: Qt.openUrlExternally(config.donateUrl)
+        //     }
+        // }
 
         RowLayout {
             id: languageBar
