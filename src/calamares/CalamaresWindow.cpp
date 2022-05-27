@@ -167,6 +167,7 @@ getWidgetNavigation( Calamares::DebugWindowManager*,
                                QCoreApplication::translate( CalamaresWindow::staticMetaObject.className(), "&Back" ),
                                navigation );
         back->setObjectName( "view-button-back" );
+        back->setProperty("button-nav-bottom", true);
         back->setEnabled( viewManager->backEnabled() );
         QObject::connect( back, &QPushButton::clicked, viewManager, &Calamares::ViewManager::back );
         QObject::connect( viewManager, &Calamares::ViewManager::backEnabledChanged, back, &QPushButton::setEnabled );
@@ -183,6 +184,7 @@ getWidgetNavigation( Calamares::DebugWindowManager*,
                                QCoreApplication::translate( CalamaresWindow::staticMetaObject.className(), "&Next" ),
                                navigation );
         next->setObjectName( "view-button-next" );
+        next->setProperty("button-nav-bottom", true);
         next->setEnabled( viewManager->nextEnabled() );
         QObject::connect( next, &QPushButton::clicked, viewManager, &Calamares::ViewManager::next );
         QObject::connect( viewManager, &Calamares::ViewManager::nextEnabledChanged, next, &QPushButton::setEnabled );
@@ -200,6 +202,7 @@ getWidgetNavigation( Calamares::DebugWindowManager*,
                                QCoreApplication::translate( CalamaresWindow::staticMetaObject.className(), "&Cancel" ),
                                navigation );
         quit->setObjectName( "view-button-cancel" );
+        quit->setProperty("button-nav-bottom", true);
         QObject::connect( quit, &QPushButton::clicked, viewManager, &Calamares::ViewManager::quit );
         QObject::connect( viewManager, &Calamares::ViewManager::quitEnabledChanged, quit, &QPushButton::setEnabled );
         QObject::connect( viewManager, &Calamares::ViewManager::quitLabelChanged, quit, &QPushButton::setText );

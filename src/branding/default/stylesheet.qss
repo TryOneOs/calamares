@@ -95,28 +95,31 @@ QPushButton#aboutButton { qproperty-icon: url(:/data/images/release.svg); }
 #licenseItemFullText {  }
 */
 
-QPushButton#view-button-back {
-    height: 1000px;
+*[button-nav-bottom="true"] { 
+    height: 24px;
+    width: 54px;
 }
 
-QComboBox QFrame {
-    border-radius: 8px;
-    border: none;
-}
-QComboBox::drop-down{
-    border-left-style: solid;
-    border: 0px;
-}
-QComboBox{
+#languageWidget {
     padding : 12px;
     border-radius: 4px;
     combobox-popup: 0;
 }
-QComboBox QAbstractItemView::item {
+
+#languageWidget QFrame {
+    border-radius: 8px;
+    border: none;
+}
+#languageWidget::drop-down{
+    border-left-style: solid;
+    border: 0px;
+}
+
+#languageWidget QAbstractItemView::item {
     margin: 8px; 
 }
-/* QListView::item{padding: 8px;} */
-QComboBox::editable:! on
+
+#languageWidget::editable:! on
 {
     border: none;
 }
