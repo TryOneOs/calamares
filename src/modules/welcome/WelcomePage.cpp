@@ -46,19 +46,12 @@ WelcomePage::WelcomePage( Config* config, QWidget* parent )
     , m_languages( nullptr )
     , m_conf( config )
 {
-    QFile file("../src/modules/welcome/WelcomePage.qss");
-	file.open(QFile::ReadOnly);
-    QFileInfo info1("../src/modules/welcome/WelcomePage.qss");
-    QMessageLogger(__FILE__, __LINE__, 0).debug() << info1.absoluteFilePath();
-    
-    QString styleSheet = QLatin1String(file.readAll());
+    QMessageLogger(__FILE__, __LINE__, 0).debug() << "object name: "+ui->languageWidget->objectName();
 
     using Branding = Calamares::Branding;
 
     const int defaultFontHeight = CalamaresUtils::defaultFontHeight();
     ui->setupUi( this );
-
-    ui->languageWidget->setStyleSheet(styleSheet);
 
     ui->aboutButton->setIcon( CalamaresUtils::defaultPixmap(
        CalamaresUtils::Information, CalamaresUtils::Original, 2 * QSize( defaultFontHeight, defaultFontHeight ) ) );
